@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pot25032025-ai.github.io/onemuay_website.html-/sitemap.xml
