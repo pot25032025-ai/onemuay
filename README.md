@@ -1,9 +1,23 @@
-# ONE MUAY SEO Upgrade
+# ONE MUAY
 
-อัปโหลดไฟล์ทั้งหมดเข้า Repository `onemuay_website.html-` แล้ว Commit changes
+เว็บไซต์ GitHub Pages แบบไฟล์เดียว ธีมฟ้า–ดำ พร้อมเอฟเฟกต์สายฟ้า
 
-ส่ง Sitemap ใน Google Search Console:
+## วิธีติดตั้ง
 
-`https://pot25032025-ai.github.io/onemuay_website.html-/sitemap.xml`
+1. เข้า Repository `onemuay`
+2. ลบไฟล์เก่าที่ไม่ต้องการออก หรืออัปโหลดไฟล์ชุดนี้ทับ
+3. ให้ไฟล์เหล่านี้อยู่หน้าแรกของ Repository:
+   - `index.html`
+   - `robots.txt`
+   - `sitemap.xml`
+   - `README.md`
+4. เข้า `Settings → Pages`
+5. เลือก `Deploy from a branch`
+6. เลือก `main` และ `/root`
+7. กด Save
 
-ไฟล์หลัก: index.html, assets/style.css, robots.txt, sitemap.xml, articles/
+เว็บไซต์:
+https://pot25032025-ai.github.io/onemuay/
+
+Sitemap:
+https://pot25032025-ai.github.io/onemuay/sitemap.xml
