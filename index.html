@@ -86,6 +86,72 @@
     footer p,.copyright{color:#8398aa}
     .copyright{padding-top:26px;margin-top:26px;border-top:1px solid rgba(255,255,255,.07);font-size:14px}
     @media(max-width:850px){nav{display:none}.hero{min-height:auto;padding:90px 0}.hero-grid,.split{grid-template-columns:1fr}.hero-card{display:none}.cards,.knowledge{grid-template-columns:1fr}.factor-grid{grid-template-columns:1fr}.section-title{align-items:start;flex-direction:column}.footer-grid{grid-template-columns:1fr}.bolt{display:none}}
+  
+    .contact-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:32px;
+    }
+    .contact-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:190px;
+      padding:15px 24px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:18px;
+      transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+    .contact-btn:hover{
+      transform:translateY(-3px);
+      filter:brightness(1.08);
+    }
+    .contact-btn.ask{
+      color:#00111c;
+      background:linear-gradient(135deg,#8cecff,#168dff);
+      box-shadow:0 0 28px rgba(25,169,255,.35);
+    }
+    .contact-btn.join{
+      color:#fff;
+      background:linear-gradient(135deg,#0f6cff,#0b3b8e);
+      box-shadow:0 0 28px rgba(15,108,255,.30);
+      border:1px solid rgba(120,230,255,.35);
+    }
+    .floating-contact{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:60;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .floating-contact a{
+      text-decoration:none;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:700;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .floating-contact .f-ask{
+      background:linear-gradient(135deg,#82e7ff,#168dff);
+      color:#00111c;
+    }
+    .floating-contact .f-join{
+      background:linear-gradient(135deg,#0f6cff,#092f78);
+      color:#fff;
+    }
+    @media(max-width:600px){
+      .contact-actions{flex-direction:column}
+      .contact-btn{width:100%}
+      .floating-contact{right:12px;bottom:12px}
+      .floating-contact a{padding:10px 14px;font-size:14px}
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -148,6 +214,10 @@
         <div class="actions">
           <a class="btn primary" href="#latest">อ่านข่าวล่าสุด</a>
           <a class="btn secondary" href="#schedule">ดูโปรแกรม</a>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-btn ask" href="https://q.me-qr.com/mwae5hof" target="_blank" rel="noopener noreferrer">📩 ติดต่อสอบถาม</a>
+          <a class="contact-btn join" href="https://q.me-qr.com/mwae5hof" target="_blank" rel="noopener noreferrer">✅ สมัครสมาชิก</a>
         </div>
       </div>
       <aside class="hero-card">
@@ -256,5 +326,11 @@
   </div>
   <div class="container copyright">© 2026 ONE MUAY • อัปเดตล่าสุด 30 กรกฎาคม 2569</div>
 </footer>
+
+<div class="floating-contact" aria-label="ช่องทางติดต่อ">
+  <a class="f-ask" href="https://q.me-qr.com/mwae5hof" target="_blank" rel="noopener noreferrer">📩 ติดต่อสอบถาม</a>
+  <a class="f-join" href="https://q.me-qr.com/mwae5hof" target="_blank" rel="noopener noreferrer">✅ สมัครสมาชิก</a>
+</div>
+
 </body>
 </html>

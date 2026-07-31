@@ -21,3 +21,10 @@ https://pot25032025-ai.github.io/onemuay/
 
 Sitemap:
 https://pot25032025-ai.github.io/onemuay/sitemap.xml
+
+
+## ปุ่มติดต่อ
+
+เพิ่มปุ่ม `ติดต่อสอบถาม` และ `สมัครสมาชิก` โดยเชื่อมไปที่:
+
+https://q.me-qr.com/mwae5hof
