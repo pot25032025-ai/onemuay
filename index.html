@@ -152,7 +152,15 @@
       .floating-contact a{padding:10px 14px;font-size:14px}
     }
 
-  </style>
+  
+    .hero-visual{position:relative;min-height:420px;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 20%,rgba(120,230,255,.28),transparent 30%),linear-gradient(160deg,#0d3152,#030914 70%);box-shadow:0 30px 90px rgba(0,0,0,.35)}
+    .hero-visual svg{width:100%;height:100%;display:block;position:absolute;inset:0}
+    .hero-visual .caption{position:absolute;left:22px;right:22px;bottom:20px;padding:13px 16px;border-radius:12px;background:rgba(2,5,10,.72);border:1px solid rgba(120,230,255,.22);backdrop-filter:blur(8px);font-weight:600;color:#dff7ff}
+    .fight-image{width:100%;height:220px;display:block;background:#06111f}.fight-image svg{width:100%;height:100%;display:block}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}.gallery-card{overflow:hidden;border-radius:18px;border:1px solid var(--line);background:#0a1728}.gallery-card .text{padding:18px}.gallery-card h3{margin:0 0 6px}.gallery-card p{margin:0;color:var(--muted)}
+    @media(max-width:850px){.hero-visual{min-height:320px}.gallery{grid-template-columns:1fr}}
+
+</style>
 
   <script type="application/ld+json">
   {
@@ -220,15 +228,7 @@
           <a class="contact-btn join" href="https://q.me-qr.com/mwae5hof" target="_blank" rel="noopener noreferrer">✅ สมัครสมาชิก</a>
         </div>
       </div>
-      <aside class="hero-card">
-        <div class="eyebrow">INFORMATION HUB</div>
-        <h2>ก่อนติดตามการแข่งขัน</h2>
-        <ul>
-          <li>ตรวจสอบวันและเวลาจากผู้จัดอย่างเป็นทางการ</li>
-          <li>เลือกช่องทางรับชมที่ได้รับอนุญาตในพื้นที่</li>
-          <li>บทวิเคราะห์ไม่ใช่การรับประกันผล</li>
-        </ul>
-      </aside>
+      <aside class="hero-visual" aria-label="ภาพนักมวยบนเวที"><svg viewBox="0 0 500 500" role="img" aria-label="นักมวยกำลังชกบนเวที"><defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0c4f83"/><stop offset="1" stop-color="#02050a"/></linearGradient><radialGradient id="light" cx="50%" cy="18%" r="55%"><stop stop-color="#9cecff" stop-opacity=".75"/><stop offset="1" stop-color="#9cecff" stop-opacity="0"/></radialGradient></defs><rect width="500" height="500" fill="url(#bg)"/><rect width="500" height="500" fill="url(#light)"/><g opacity=".85"><line x1="40" y1="335" x2="460" y2="335" stroke="#4bc7ff" stroke-width="6"/><line x1="35" y1="365" x2="465" y2="365" stroke="#278fd3" stroke-width="5"/><line x1="30" y1="395" x2="470" y2="395" stroke="#1c6ca7" stroke-width="5"/><line x1="70" y1="310" x2="70" y2="440" stroke="#d8f7ff" stroke-width="8"/><line x1="430" y1="310" x2="430" y2="440" stroke="#d8f7ff" stroke-width="8"/></g><ellipse cx="250" cy="420" rx="170" ry="22" fill="#000" opacity=".35"/><g transform="translate(105 115)"><circle cx="95" cy="65" r="34" fill="#0a1018"/><path d="M65 95 Q95 75 125 95 L140 190 Q105 215 65 190 Z" fill="#0a1018"/><path d="M72 115 Q20 125 15 165 Q30 180 48 168 L90 140 Z" fill="#0a1018"/><circle cx="18" cy="166" r="20" fill="#1fa8ff"/><path d="M122 115 Q175 105 205 135 Q206 150 192 160 L135 140 Z" fill="#0a1018"/><circle cx="204" cy="139" r="21" fill="#1fa8ff"/><path d="M80 190 L62 285 L92 288 L110 205 Z" fill="#0a1018"/><path d="M118 190 L145 282 L175 275 L138 195 Z" fill="#0a1018"/></g><g transform="translate(250 105)"><circle cx="95" cy="70" r="34" fill="#111821"/><path d="M62 102 Q95 82 128 102 L142 192 Q105 218 62 192 Z" fill="#111821"/><path d="M68 120 Q25 100 2 120 Q0 138 17 149 L84 145 Z" fill="#111821"/><circle cx="4" cy="122" r="21" fill="#79e7ff"/><path d="M128 120 Q170 135 185 175 Q175 190 158 181 L112 145 Z" fill="#111821"/><circle cx="185" cy="177" r="21" fill="#79e7ff"/><path d="M80 193 L58 285 L90 290 L110 208 Z" fill="#111821"/><path d="M122 193 L150 284 L179 278 L140 198 Z" fill="#111821"/></g><path d="M250 18 205 104h35l-10 65 58-102h-37z" fill="#9cecff" opacity=".9"/></svg><div class="caption">บรรยากาศเวทีมวย • พลัง • ความเร็ว • เทคนิค</div></aside>
     </div>
   </section>
 
@@ -309,7 +309,8 @@
     </div>
   </section>
 
-  <section id="faq">
+  <section class="dark"><div class="container"><div class="section-title"><div><small>ภาพประกอบ</small><h2>บรรยากาศกีฬามวย</h2></div></div><div class="gallery"><article class="gallery-card"><div class="fight-image"><svg viewBox="0 0 600 340" role="img" aria-label="เวทีมวยใต้แสงสปอร์ตไลต์"><defs><linearGradient id="g1" x1="0" x2="1"><stop stop-color="#06111f"/><stop offset="1" stop-color="#0d4f82"/></linearGradient></defs><rect width="600" height="340" fill="url(#g1)"/><circle cx="130" cy="55" r="42" fill="#b8f3ff" opacity=".25"/><circle cx="470" cy="55" r="42" fill="#b8f3ff" opacity=".25"/><path d="M130 55 230 270" stroke="#b8f3ff" stroke-width="20" opacity=".12"/><path d="M470 55 370 270" stroke="#b8f3ff" stroke-width="20" opacity=".12"/><rect x="95" y="190" width="410" height="100" rx="6" fill="#07111f" stroke="#5bd6ff" stroke-width="5"/><line x1="105" y1="215" x2="495" y2="215" stroke="#5bd6ff" stroke-width="5"/><line x1="105" y1="242" x2="495" y2="242" stroke="#2f9bd0" stroke-width="4"/><line x1="105" y1="269" x2="495" y2="269" stroke="#1c6a9a" stroke-width="4"/><rect x="110" y="175" width="10" height="130" fill="#dff8ff"/><rect x="480" y="175" width="10" height="130" fill="#dff8ff"/></svg></div><div class="text"><h3>เวทีมวย</h3><p>บรรยากาศก่อนเสียงระฆังเริ่มการแข่งขัน</p></div></article><article class="gallery-card"><div class="fight-image"><svg viewBox="0 0 600 340" role="img" aria-label="นักมวยฝึกซ้อมกับกระสอบทราย"><rect width="600" height="340" fill="#07111f"/><circle cx="160" cy="70" r="32" fill="#101820"/><path d="M125 103 Q160 80 195 103 L210 215 Q160 242 120 215 Z" fill="#101820"/><path d="M130 120 55 155 70 185 150 150Z" fill="#101820"/><circle cx="58" cy="170" r="25" fill="#1fa8ff"/><path d="M194 120 260 155 248 185 175 150Z" fill="#101820"/><circle cx="260" cy="170" r="25" fill="#1fa8ff"/><path d="M145 214 120 318 155 318 170 225Z" fill="#101820"/><path d="M180 214 215 318 248 318 200 220Z" fill="#101820"/><rect x="400" y="48" width="95" height="230" rx="45" fill="#0b3556" stroke="#79e7ff" stroke-width="6"/><line x1="448" y1="0" x2="448" y2="48" stroke="#dff8ff" stroke-width="6"/></svg></div><div class="text"><h3>การฝึกซ้อม</h3><p>วินัยและการเตรียมร่างกายก่อนขึ้นชก</p></div></article><article class="gallery-card"><div class="fight-image"><svg viewBox="0 0 600 340" role="img" aria-label="นวมมวยสีน้ำเงิน"><defs><radialGradient id="g3"><stop stop-color="#1caeff"/><stop offset="1" stop-color="#08345c"/></radialGradient></defs><rect width="600" height="340" fill="#06111f"/><ellipse cx="300" cy="290" rx="170" ry="25" fill="#000" opacity=".4"/><path d="M185 90 Q115 110 120 205 Q125 285 220 278 Q275 270 278 205 Q280 155 240 128 Q215 108 185 90Z" fill="url(#g3)" stroke="#8beaff" stroke-width="6"/><path d="M415 90 Q485 110 480 205 Q475 285 380 278 Q325 270 322 205 Q320 155 360 128 Q385 108 415 90Z" fill="url(#g3)" stroke="#8beaff" stroke-width="6"/><rect x="160" y="250" width="120" height="55" rx="10" fill="#0a1d31" stroke="#5cd7ff" stroke-width="4"/><rect x="320" y="250" width="120" height="55" rx="10" fill="#0a1d31" stroke="#5cd7ff" stroke-width="4"/></svg></div><div class="text"><h3>อุปกรณ์มวย</h3><p>นวมมวยและอุปกรณ์ป้องกันสำหรับการฝึกซ้อม</p></div></article></div></div></section>
+<section id="faq">
     <div class="container">
       <div class="section-title"><div><small>คำถามพบบ่อย</small><h2>ข้อมูลที่แฟนมวยควรรู้</h2></div></div>
       <details open><summary>จะรู้ได้อย่างไรว่าโปรแกรมการแข่งขันถูกต้อง?</summary><p>ตรวจสอบจากเว็บไซต์หรือบัญชีโซเชียลอย่างเป็นทางการของผู้จัด และดูวันที่อัปเดตของข้อมูลทุกครั้ง</p></details>
