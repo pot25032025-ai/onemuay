@@ -1,0 +1,11 @@
+{
+  "name": "ONE MUAY",
+  "short_name": "ONE MUAY",
+  "start_url": "https://pot25032025-ai.github.io/onemuay_website.html-/",
+  "scope": "https://pot25032025-ai.github.io/onemuay_website.html-/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "lang": "th",
+  "icons": []
+}

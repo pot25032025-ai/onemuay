@@ -1,31 +1,27 @@
-# ONE MUAY NEWS PRO
+# SEO Files — ONE MUAY
 
-เว็บไซต์ข่าวมวยหลายหน้า สำหรับ GitHub Pages
+เว็บไซต์:
+https://pot25032025-ai.github.io/onemuay_website.html-/
 
-## โครงสร้าง
+## ไฟล์พร้อมอัปโหลด
 
-- หน้าแรก
-- ข่าว
-- บทวิเคราะห์
-- โปรแกรม
-- นักกีฬา
-- ติดต่อ
-- ระบบค้นหาเบื้องต้น
-- SEO แยกแต่ละหน้า
-- Sitemap และ Robots
-- รองรับมือถือ
+- `robots.txt`
+- `sitemap.xml`
+- `manifest.json`
+- `404.html`
+- `feed.xml`
+- `seo-head-snippet.html`
 
 ## วิธีติดตั้ง
 
-1. แตกไฟล์ ZIP
-2. ลบไฟล์เก่าใน Repository `onemuay`
-3. ลากไฟล์และโฟลเดอร์ทั้งหมดขึ้น GitHub พร้อมกัน
-4. Commit ไปที่ `main`
-5. ตั้ง Pages เป็น `main / (root)`
+1. อัปโหลด `robots.txt`, `sitemap.xml`, `manifest.json`, `404.html` และ `feed.xml` ไว้ระดับเดียวกับ `index.html`
+2. เปิด `seo-head-snippet.html`
+3. คัดลอกโค้ดไปวางภายใน `<head>` ของ `index.html`
+4. Commit changes
+5. รอ GitHub Pages deploy แล้วทดสอบ:
+   - https://pot25032025-ai.github.io/onemuay_website.html-/robots.txt
+   - https://pot25032025-ai.github.io/onemuay_website.html-/sitemap.xml
+6. ส่ง Sitemap ใน Google Search Console:
+   - https://pot25032025-ai.github.io/onemuay_website.html-/sitemap.xml
 
-เว็บไซต์: https://pot25032025-ai.github.io/onemuay/
-
-
-## รูปภาพจริง
-
-เพิ่มรูปภาพที่ผู้ใช้อัปโหลดครบทั้ง 8 รูป และจัดวางในหน้าแรก ข่าว โปรแกรม นักกีฬา และบทวิเคราะห์ พร้อม Carousel และ Lightbox
+หมายเหตุ: GitHub Pages แบบ Project Site ใช้โดเมนร่วม `pot25032025-ai.github.io` ดังนั้นไฟล์ robots.txt ภายในโฟลเดอร์โปรเจกต์ช่วยให้เครื่องมือตรวจ SEO เข้าถึงได้ แต่กฎมาตรฐานของ robots.txt จริง ๆ อ้างอิงที่รากโดเมนเป็นหลัก
