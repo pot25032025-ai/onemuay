@@ -86,3 +86,46 @@ footer{padding:54px 0 28px;background:#010409;border-top:1px solid var(--line)}.
   .carousel-slide img{height:360px}
   .hero-photo{min-height:360px}
 }
+.schedule-box{
+    background:#111;
+    border:1px solid #252525;
+    border-radius:18px;
+    padding:30px;
+    margin-top:20px;
+}
+
+.schedule-box h3{
+    color:#ffd54f;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.schedule-box h4{
+    color:#ff4747;
+    margin:20px 0 8px;
+    font-size:22px;
+}
+
+.schedule-box p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+.fight-list{
+    margin:15px 0;
+    padding-left:20px;
+}
+
+.fight-list li{
+    color:#fff;
+    margin-bottom:10px;
+    line-height:1.8;
+    border-bottom:1px solid #222;
+    padding-bottom:10px;
+}
+
+.schedule-box hr{
+    border:none;
+    border-top:1px solid #333;
+    margin:25px 0;
+}
