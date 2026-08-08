@@ -138,18 +138,59 @@
   </script>
 
   <style>
-    .one-schedule{padding:80px 0;background:linear-gradient(180deg,#07111f 0%,#030914 100%);border-top:1px solid rgba(123,231,255,.12);border-bottom:1px solid rgba(123,231,255,.12)}
-    .one-schedule .schedule-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
-    .one-schedule .schedule-card{background:#0a1728;border:1px solid rgba(86,202,255,.22);border-radius:20px;padding:26px;box-shadow:0 18px 50px rgba(0,0,0,.22)}
-    .one-schedule .schedule-card h3{margin:0 0 8px;font-size:25px;color:#7be7ff}
-    .one-schedule .schedule-meta{color:#a9bdce;margin-bottom:18px}
-    .one-schedule .fight-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-    .one-schedule .fight-list li{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;padding:13px 14px;background:#07111f;border:1px solid rgba(86,202,255,.14);border-radius:12px;color:#eef8ff}
-    .one-schedule .fight-list li span:nth-child(2){color:#7be7ff;font-weight:800}
-    .one-schedule .fight-list li span:last-child{text-align:right}
-    .one-schedule .schedule-note{margin-top:22px;color:#a9bdce;font-size:14px}
-    @media(max-width:900px){.one-schedule .schedule-wrap{grid-template-columns:1fr}}
-    @media(max-width:600px){.one-schedule{padding:60px 0}.one-schedule .schedule-card{padding:18px}.one-schedule .fight-list li{grid-template-columns:1fr;text-align:left}.one-schedule .fight-list li span:nth-child(2){display:none}.one-schedule .fight-list li span:last-child{text-align:left}}
+    .weekend-program{
+      padding:82px 0;
+      background:linear-gradient(180deg,#07111f 0%,#030914 100%);
+      border-top:1px solid rgba(123,231,255,.12);
+      border-bottom:1px solid rgba(123,231,255,.12);
+    }
+    .program-day{
+      margin-top:28px;
+      padding:28px;
+      border:1px solid rgba(86,202,255,.22);
+      border-radius:22px;
+      background:#081523;
+      box-shadow:0 20px 55px rgba(0,0,0,.22);
+    }
+    .program-day-title{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      margin-bottom:22px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(86,202,255,.15);
+    }
+    .program-day-title h3{margin:0;font-size:28px;color:#7be7ff}
+    .program-day-title span{color:#a9bdce;font-size:14px}
+    .event-block{
+      margin-top:22px;padding:22px;border-radius:18px;background:#0a1728;
+      border:1px solid rgba(86,202,255,.16)
+    }
+    .event-block h4{margin:0 0 8px;font-size:22px;color:#eef8ff}
+    .event-meta{margin:0 0 14px;color:#a9bdce}
+    .watch-link{
+      display:inline-flex;margin:0 0 16px;padding:8px 13px;border-radius:999px;
+      background:rgba(22,168,255,.11);border:1px solid rgba(123,231,255,.28);
+      color:#7be7ff;font-weight:700;font-size:13px
+    }
+    .bout-list{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+    .bout-list li{
+      display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;
+      padding:12px 14px;background:#06111f;border:1px solid rgba(86,202,255,.11);
+      border-radius:12px;color:#eef8ff
+    }
+    .bout-list li b{color:#7be7ff;font-size:12px;letter-spacing:.5px}
+    .bout-list li span:last-child{text-align:right}
+    .program-note{margin-top:24px;color:#9db2c4;font-size:14px}
+    @media(max-width:700px){
+      .program-day{padding:18px}
+      .program-day-title{align-items:flex-start;flex-direction:column}
+      .event-block{padding:17px}
+      .bout-list li{grid-template-columns:1fr}
+      .bout-list li b{display:none}
+      .bout-list li span:last-child{text-align:left}
+    }
   </style>
 
 </head>
@@ -186,6 +227,7 @@
       <a href="index.html">หน้าแรก</a>
       <a href="news/index.html">ข่าว</a>
       <a href="schedule/index.html">โปรแกรม</a>
+      <a href="#weekend-program">มวย 8–9 ส.ค.</a>
       <a href="#one-lumpinee-schedule">ONE ลุมพินี</a>
       <a href="fighters/index.html">นักกีฬา</a>
       <a href="analysis/index.html">บทวิเคราะห์</a>
@@ -235,7 +277,7 @@
 
           <a
             class="btn join"
-            href="https://q.me-qr.com/mwae5hof"
+            href="https://q.me-qr.com/c9bpbwvt"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -266,51 +308,164 @@
     </div>
   </section>
 
-
-  <!-- โปรแกรมมวย ONE ลุมพินี -->
-  <section class="one-schedule" id="one-lumpinee-schedule">
+  <!-- โปรแกรมมวยไทย เสาร์-อาทิตย์ -->
+  <section class="weekend-program" id="weekend-program">
     <div class="container">
       <div class="section-title">
         <div>
-          <small>โปรแกรมมวยล่าสุด</small>
-          <h2>ศึก ONE ลุมพินี</h2>
+          <small>โปรแกรมมวยอัปเดต</small>
+          <h2>โปรแกรมมวยไทย 8–9 สิงหาคม 2569</h2>
         </div>
-        <p>สนามมวยเวทีลุมพินี แบ่งการแข่งขันออกเป็น 2 ช่วง</p>
+        <p>รวมโปรแกรม เวที เวลา ช่องถ่ายทอด และคู่มวยตามข้อมูลล่าสุดที่ได้รับ</p>
       </div>
 
-      <div class="schedule-wrap">
-        <article class="schedule-card">
-          <h3>ช่วงแรก • เริ่มเวลา 18.30 น.</h3>
-          <p class="schedule-meta">ณ สนามมวยเวทีลุมพินี</p>
-          <ul class="fight-list">
-            <li><span>เผิง ซือหาว</span><span>VS</span><span>สึบาสะ</span></li>
-            <li><span>ทหารเอก นายกเอท่าศาลา</span><span>VS</span><span>ดาบดำ ปตท.ทองทวี</span></li>
-            <li><span>มารัต กริกอเรียน</span><span>VS</span><span>มามูกา อูซูบายัน</span></li>
-            <li><span>อับดุลลา ดายาคาเอฟ</span><span>VS</span><span>ซุปเปอร์เล็ก ซุปเปอร์เล็กมวยไทย</span></li>
-            <li><span>นาบิล อานาน</span><span>VS</span><span>เสือคิม ป๋องสุพรรณ พีเค.</span></li>
+      <section class="program-day" id="program-2026-08-08">
+        <div class="program-day-title">
+          <h3>วันเสาร์ที่ 8 สิงหาคม 2569</h3>
+          <span>รวม 4 รายการ</span>
+        </div>
+
+        <article class="event-block">
+          <h4>ศึกจ้าวมวยไทย</h4>
+          <p class="event-meta">ณ เวทีมวยสยามอ้อมน้อย • เริ่มเวลา 12.15 น. • ถ่ายทอดสดทาง ช่อง 3HD</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>เพชรนคร อี.เอ็น.มวยไทย</span><b>VS</b><span>ผามออีแดง โชคอำนวยชัย</span></li>
+            <li><span>สุครีพ ส.บุญมีฤทธิ์</span><b>VS</b><span>เกียรติศักดิ์ ชูทางด่วน</span></li>
+            <li><span>เหล็กกล้า เค.โต้งตลิ่งชัน</span><b>VS</b><span>วันเผด็จ ลูกสวน</span></li>
+            <li><span>ไทรโยค เกียรติ์ไพรสนธิ์</span><b>VS</b><span>ยอดไฟเตอร์ ไรซิ่งมวยไทย</span></li>
           </ul>
         </article>
 
-        <article class="schedule-card">
-          <h3>ช่วงที่ 2 • เริ่มเวลา 20.30 น.</h3>
-          <p class="schedule-meta">ณ สนามมวยเวทีลุมพินี</p>
-          <ul class="fight-list">
-            <li><span>ฉัตรเพชร เสือแบล็คมวยไทย</span><span>VS</span><span>ริกุ อิโตะ</span></li>
-            <li><span>สองแผ่นดิน ช.แก้ววิเศษ</span><span>VS</span><span>วินเซนโซ เอสโปซิโต</span></li>
-            <li><span>ขุนศึก ทีวันไฟต์อะคาเดมี</span><span>VS</span><span>ออง ทุน โบ</span></li>
-            <li><span>อรรถชัย ลูกสวน</span><span>VS</span><span>ซุปเปอร์แชมป์ วูดดี้ชลบุรีพระลิสซิ่ง</span></li>
-            <li><span>ช่างทอง เอ็มยุเด็น</span><span>VS</span><span>เพชรอันดา เกียรติยอดยิ่ง</span></li>
-            <li><span>ราวี ลูกสวน</span><span>VS</span><span>ทันทาวี อาเหม็ด ฮาเฟซ</span></li>
-            <li><span>มนต์พระราม ศิษย์เพชรฉลูกัณฑ์</span><span>VS</span><span>คม พีเค.แสนชัย</span></li>
-            <li><span>สุขสวัสดิ์ พีเค.แสนชัย</span><span>VS</span><span>อิลยาส มูซาเอฟ</span></li>
-            <li><span>เพชรนิลมังกร น้ำแข็งไอซ์แลนด์</span><span>VS</span><span>เพชร สวนหลวงรถยก</span></li>
+        <article class="event-block">
+          <h4>ศึกมวยไทยเกียรติเพชร ทรูโฟร์ยู ซุปเปอร์ไฟต์</h4>
+          <p class="event-meta">ณ เวทีมวยสยามอ้อมน้อย • เริ่มเวลา 14.30 น. • ถ่ายทอดสดทาง True4U</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>ยอดแสนเก่ง ส.โชคมีชัย</span><b>VS</b><span>เพชรสีทอง ศิษย์เจ๊แดง</span></li>
+            <li><span>เพชรบ้านใหม่ สิงห์คลองลาน</span><b>VS</b><span>คนชลเล็ก โชติบางแสน</span></li>
+            <li><span>เพชรอาวุธ กิ๊กพระราม7</span><b>VS</b><span>ก้องพิชิต ท็อปแฟรี่ยิม (ส.บางระจัน)</span></li>
+            <li><span>เพชรเมืองฝาง ส.ยิ่งเจริญการช่าง</span><b>VS</b><span>พรนำโชค ส.ภูมิภัทร</span></li>
+            <li><span>โบวี่ ส.โชคมีชัย</span><b>VS</b><span>มังกรเพชร ศิษย์เจ๊แดง</span></li>
           </ul>
         </article>
-      </div>
 
-      <p class="schedule-note">หมายเหตุ: โปรแกรมและเวลาแข่งขันอาจเปลี่ยนแปลง ควรตรวจสอบประกาศล่าสุดจากผู้จัดการแข่งขันก่อนวันชก</p>
+        <article class="event-block">
+          <h4>ศึก ONE ซามูไร เอบาระ เวฟ อารีนา โอตะ</h4>
+          <p class="event-meta">ณ สนามเอบาระ เวฟ อารีนา โอตะ กรุงโตเกียว ประเทศญี่ปุ่น • เวลา 15.30 น. ตามเวลาประเทศไทย • ถ่ายทอดสดทาง Live.ONEFC.com</p>
+          <a class="watch-link" href="https://live.onefc.com/" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>รันมะ</span><b>VS</b><span>คัตซูกิ คิตาโนะ</span></li>
+            <li><span>ฮิโรกิ คาซาฮารา</span><b>VS</b><span>ริวโตะ ชิโอกาวา</span></li>
+            <li><span>ซูบารุ โมริ</span><b>VS</b><span>โยซูเกะ ซาโตะ</span></li>
+            <li><span>โชมะ โอกุมุระ</span><b>VS</b><span>เรอิจิ ทากากิ</span></li>
+            <li><span>อายูมุ ยามาโมโตะ</span><b>VS</b><span>เรียว ฮิรายามะ</span></li>
+            <li><span>เคอิโตะ ยามาคิตะ</span><b>VS</b><span>โคยูรุ ทาโนอูเอะ</span></li>
+            <li><span>โคซูเกะ ทาคากิ</span><b>VS</b><span>หลัว เชา</span></li>
+            <li><span>คาอิโตะ</span><b>VS</b><span>โมฮัมเหม็ด เซียซารานี</span></li>
+            <li><span>มาซาอากิ โนอิริ</span><b>VS</b><span>หลิว เมิงหยาง</span></li>
+          </ul>
+        </article>
+
+        <article class="event-block">
+          <h4>ศึก RWS ราชดำเนิน</h4>
+          <p class="event-meta">ณ สนามมวยเวทีราชดำเนิน • เริ่มเวลา 19.00 น.</p>
+          <ul class="bout-list">
+            <li><span>ฮวน กูเตียร์เรช</span><b>VS</b><span>เดวิด เดลาปาซ</span></li>
+            <li><span>สมิงดำ ฉ.อจลบุญ</span><b>VS</b><span>มูฮันนัด ลัดมี</span></li>
+            <li><span>เพชรวิชัย เดชเดโช</span><b>VS</b><span>โมฮัมมาดี โซบฮาน วันของโอม</span></li>
+            <li><span>อัคราม อูซิบี่</span><b>VS</b><span>เพชรนำโชค ป๋าโด๋อยุธยา</span></li>
+            <li><span>คิมหล่วย วันของโอม.WKO</span><b>VS</b><span>โทมัส อากีร์เร่</span></li>
+            <li><span>ดามพ์ พรัญชัย</span><b>VS</b><span>กัปปิตัน เพชรยินดีอะคาเดมี่</span></li>
+            <li><span>เดเมียน แพทริก ฮอร์ธ</span><b>VS</b><span>เอเลียส คาเล็ด</span></li>
+            <li><span>น็อตใหม่ ว.อุรชา</span><b>VS</b><span>กวางป่า ตี๋น้อยคชิน</span></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="program-day" id="program-2026-08-09">
+        <div class="program-day-title">
+          <h3>วันอาทิตย์ที่ 9 สิงหาคม 2569</h3>
+          <span>รวม 4 รายการหลัก</span>
+        </div>
+
+        <article class="event-block">
+          <h4>ศึกมวยดีวิถีไทย</h4>
+          <p class="event-meta">ณ เวทีมวยจิตรเมืองนนท์ อ.ต.ก.3 • ช่วงแรก เริ่มเวลา 10.30 น. • ถ่ายทอดสดทาง True Sports 5</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>แองเจโล ส.ตะเคียนทอง</span><b>VS</b><span>เพชรราชา ซ.โชคอนันต์</span></li>
+            <li><span>ก้องมงคล อ.วีระยุทธ</span><b>VS</b><span>วีระศักดิ์ ส.สมานชัย</span></li>
+            <li><span>หวังจือหยู่ เจ.เอฟ.พุ่มพันธ์ม่วง</span><b>VS</b><span>อาจาเล่ ส.ตะเคียนทอง</span></li>
+            <li><span>วันฉลอง เจ.เอฟ.พุ่มพันธ์ม่วง</span><b>VS</b><span>โชคมณี ทรัพย์บุญทวี</span></li>
+          </ul>
+          <p class="event-meta" style="margin-top:18px">ช่วงสอง • เริ่มเวลา 12.30 น. • ถ่ายทอดสดทาง ช่อง 8 หมายเลข 27</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>แรมโบ้ เจ.เอฟ.พุ่มพันธ์ม่วง</span><b>VS</b><span>เพชรสายฝน ซันรัตภูมิ</span></li>
+            <li><span>ก้องมงคล ประธานเหน่งกุมภวาปี</span><b>VS</b><span>สันติชัย ป.ดาวรุ่งเรือง</span></li>
+            <li><span>คูก้า สิงห์บัลลังก์ทอง</span><b>VS</b><span>มนตรีเล็ก เพชรสุภานันท์</span></li>
+            <li><span>เหนือธรณี พุฒิประชาชื่น</span><b>VS</b><span>สมิงเดช ตลาดคนเดินเพลินเมืองพล</span></li>
+          </ul>
+        </article>
+
+        <article class="event-block">
+          <h4>ศึกมวยไทย 7 สี</h4>
+          <p class="event-meta">ณ เวทีมวยช่อง 7 • เริ่มเวลา 14.30 น. • ถ่ายทอดสดทาง ช่อง 7 HD</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>ยอดกัณฑ์ ช้างนครศรี</span><b>VS</b><span>มอญขาว ซีเมนต์ดี</span></li>
+            <li><span>เมืองช้าง ส.เดชะพันธ์</span><b>VS</b><span>เพชรเมืองทอง ส.พงษ์อมร</span></li>
+            <li><span>ทับทิมทอง อิงฟ้าโฮเทลอุบล</span><b>VS</b><span>เป็ก ปตท.ทองทวี</span></li>
+            <li><span>เพชรฤทธิ์ เหล่าโชคเจริญราชสีห์</span><b>VS</b><span>สุดหล่อ เจี๊ยบรามอินทรา</span></li>
+            <li><span>เพชรอานนท์ ศิษย์ครูเจี๊ยบ</span><b>VS</b><span>เพชรแสนเมืองตาก ศิษย์ ด.ว.</span></li>
+            <li><span>ธีฤทธิ์ ช้างนครศรี</span><b>VS</b><span>ศรีขรภูมิ นักบินอะไหล่ยนต์</span></li>
+          </ul>
+        </article>
+
+        <article class="event-block">
+          <h4>ศึกท่อน้ำไทย TKO เกียรติเพชร</h4>
+          <p class="event-meta">ณ เวทีราชดำเนิน • ช่วงที่ 1 เริ่มเวลา 18.00 น. • ถ่ายทอดสดทาง ททบ.5 HD</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>ฤทธิชัย ป.พีณภัทร</span><b>VS</b><span>ไม้ซางเงิน ส.ยิ่งเจริญการช่าง</span></li>
+            <li><span>เพชรดาวเหนือ ต๋องขาวเชียงใหม่</span><b>VS</b><span>เยี่ยมยุทธ ป.มงคลอินทร์</span></li>
+            <li><span>วันพิชิต เพชรพรหมคุณมวยไทย</span><b>VS</b><span>ยอดนที ผดุงชัยมวยไทยยิม</span></li>
+            <li><span>วุฒิกร สวนน้ำธารคีรี</span><b>VS</b><span>สิงห์ดำ ส.ดำเนิน</span></li>
+            <li><span>เงาเพชร โกลิตะมวยไทย</span><b>VS</b><span>ศักดิ์ประมวล น้ำดื่ม ที.ทู.เอ.วอเตอร์</span></li>
+          </ul>
+          <p class="event-meta" style="margin-top:18px">ช่วงที่ 2 เริ่มเวลา 20.15 น. • ถ่ายทอดสดทางเพจ มวยไทย เกียรติเพชร</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>ลมฝน ส.ศิลารักษ์</span><b>VS</b><span>นกน้อย ช.ชัชชัย</span></li>
+            <li><span>โปเต้ เกียรติทรงฤทธิ์</span><b>VS</b><span>เจนภพ ม.ราชภัฏจอมบึง</span></li>
+            <li><span>เต๋า สมชาย ศิษย์แก้วประพล</span><b>VS</b><span>ปูดำ ลูกหนึ่งอุบล</span></li>
+            <li><span>เพชรอุบล ส.โต้งอุบล</span><b>VS</b><span>นิโค บูฟฟาร์ด อ.เบญจมาส</span></li>
+            <li><span>บุเรงนอง ลูกเจ้าพ่อโรงต้ม</span><b>VS</b><span>หมูแซง ทันสะดี ครูอ๊อดโพนทอง</span></li>
+          </ul>
+        </article>
+
+        <article class="event-block">
+          <h4>ศึกมวยไทย ไทยไฟท์ ลีก</h4>
+          <p class="event-meta">ณ เวิลด์ สยาม สเตเดียม ตะวันนา บางกะปิ กทม. • เวลา 18.20 น. • ถ่ายทอดสดทาง PPTV HD36</p>
+          <a class="watch-link" href="https://q.me-qr.com/c9bpbwvt" target="_blank" rel="noopener noreferrer">▶ คลิกดูมวยสดได้ที่นี่</a>
+          <ul class="bout-list">
+            <li><span>แบงค์ไทย สจ.วิชิตเมืองแปดริ้ว</span><b>VS</b><span>อุสซามา ตาตตา</span></li>
+            <li><span>เพชรสิงหา สจ.วิชิตเมืองแปดริ้ว</span><b>VS</b><span>นาวิด อาลิซาเดห์</span></li>
+            <li><span>กายสิทธิ์ ป.ประจันสี</span><b>VS</b><span>หลี่ เจียหลง</span></li>
+            <li><span>คนองศึก สจ.วิชิตเมืองแปดริ้ว</span><b>VS</b><span>ปฏักเอก เทพภาคิน</span></li>
+            <li><span>เพชรมังกร บ้านอินทรี ลูกพระยม</span><b>VS</b><span>เพชรมงคล ทรัพย์แก้ว ลูกพระยม</span></li>
+            <li><span>วรจักรเล็ก เกียรติฉัตรชัย</span><b>VS</b><span>เอุสซามา ทาอูด</span></li>
+            <li><span>ยอดคมปฏัก ซินบีมวยไทย</span><b>VS</b><span>ยานิส คาสเซ็ม</span></li>
+          </ul>
+        </article>
+      </section>
+
+      <p class="program-note">หมายเหตุ: โปรแกรม เวลา และช่องทางถ่ายทอดอาจมีการเปลี่ยนแปลง ควรตรวจสอบประกาศล่าสุดจากผู้จัดหรือผู้ถือลิขสิทธิ์ก่อนรับชม</p>
     </div>
   </section>
+
+
 
 
   <!-- ข่าวเด่น -->
@@ -716,7 +871,7 @@
 
   <a
     class="f-contact"
-    href="https://q.me-qr.com/mwae5hof"
+    href="https://q.me-qr.com/c9bpbwvt"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -725,7 +880,7 @@
 
   <a
     class="f-join"
-    href="https://q.me-qr.com/mwae5hof"
+    href="https://q.me-qr.com/c9bpbwvt"
     target="_blank"
     rel="noopener noreferrer"
   >
